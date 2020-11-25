@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Kurs Rupiah</title>
+	<style>
+		body {
+			color: black;
+			min-height: 90vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			background-color: cyan;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			background-color: #ecf0f1;
+			padding: 1em;
+			max-width: 500px;
+			width: 100%;
+			border-radius: 1em;
+		}
+
+		input, select, button {
+			margin: 1em;
+			padding: 1em;
+			border-radius: 1em;
+			outline: none;
+			border: 1px solid #bdc3c7;
+		}
+
+		.result {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<h2>Kurs Rupiah - Mata Uang Asing</h2>
+	<div class="container">
+		<input type="number" class="input" placeholder="Masukan Jumlah">
+		<select class="kurs">
+			<option value="Dollar US">Dollar US</option>
+			<option value="Dollar Singapore">Dollar Singapore</option>
+			<option value="Ringgit Malaysia">Ringgit Malaysia</option>
+			<option value="Yen Jepan">Yen Jepan</option>
+			<option value="Euro">Euro</option>
+			<option value="Riyal Arab Saudi">Riyal Arab Saudi</option>
+		</select>
+		<button class="hitung">Hitung</button>
+		<p class="result">Nilai Rupiah: </p>
+	</div>
+
+	<script>
+		const input = document.querySelector(".input");
+		const kurs = document.querySelector(".kurs");
+		const btnHitung = document.querySelector(".hitung");
+		const result = document.querySelector(".result");
+
+		btnHitung.addEventListener("click", function() {
+			if (kurs.value == "Dollar US") {
+				result.innerHTML = "Hasil: " + parseInt(input.value) * 9915;
+			}
+
+			else if (kurs.value == "Dollar Singapore") {
+				result.innerHTML = "Hasil: " + parseInt(input.value) * 13472;
+			}
+
+			else if (kurs.value == "Ringgit Malaysia") {
+				result.innerHTML = "Hasil: " + parseInt(input.value) * 874;
+			}
+			else if (kurs.value == "Yen Jepan") {
+				result.innerHTML = "Hasil: " + parseInt(input.value) * 120;
+			}
+			else if (kurs.value == "Euro") {
+				result.innerHTML = "Hasil: " + parseInt(input.value) * 15888;
+			}
+			else if (kurs.value == "Riyal Arab Saudi") {
+				result.innerHTML = "Hasil: " + parseInt(input.value) * 3592;
+			}
+		})
+	</script>
+</body>
+</html>

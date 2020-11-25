@@ -1,0 +1,42 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<html>
+
+<head>
+    <title>Chat Message</title>
+    <style>
+        div{
+     width: 605px;
+     height: 605px;
+     border-top: 2px solid black;
+     border-bottom: 2px solid black;
+     border-left: 2px solid black;
+     border-right: 2px solid black;
+     background: white;
+     background-image: url(image.jpg);
+   }
+    </style>
+</head>
+
+<body>
+    <div id="isichat">
+
+    </div>
+
+    <form class="frm" method="REQUEST" onsubmit="return kirim();">
+        <input id="message"style="width: 44%" type="text" name="pesan">
+        <button type="submit" onclick="return kirim();">KIRIM PESAN</button>
+    </form>
+
+</body>
+<script type="text/javascript">
+    function kirim() {
+        let pesan = document.getElementById("message").value;
+        document.getElementById("isichat").innerHTML += pesan + "<br/>";
+        document.getElementById("message").value = "";
+        return false;
+    }
+</script>
+
+</html>

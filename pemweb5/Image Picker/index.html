@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <body>
+    <marquee widht="1000" height="50">IMAGE PICKER</marquee>
+</body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="script.js"></script> -->
+    <style>
+        .body {
+            margin: 200px;
+        }
+
+        #gambar {
+            width: 400px;
+            margin-left: 23px;
+        }
+
+        .gambar {
+            margin-left: 25px;
+        }
+
+        body {
+            align-content: center;
+            margin: 200px auto;
+            width: 450px;
+            padding: 7px;
+            border: 5px solid green;
+            box-shadow: 6px 6px 8px orange;
+            background: aquamarine;
+        }
+
+        #listgambar {
+            width: 450px;
+            text-align: center;
+            border-bottom: 30px;
+            margin: 20px auto;
+            margin-right: 60px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h2>BUAH BUAHAN</h2>
+    <select onchange="gantigambar();" id="listgambar">
+        <option value="gmbar/buahbuahan.jpeg" class="gambar">PILIH BUAH</option>
+        <option value="gambar/apel.jpg">BUAH APEL</option>
+        <option value="gambar/alpuket.jpg">BUAH ALPUKET</option>
+        <option value="gambar/belimbing.jpeg">BUAH BELIMBING</option>
+        <option value="gambar/nanas.jpg">BUAH NANAS</option>
+        <option value="gambar/rambutan.jpg">BUAH RAMBUTAN </option>
+        <option value="gambar/strawberry.jpg">BUAH STRAWBERRY</option>
+    </select>
+    <br />
+    <img src="portfolio/alquran.jpeg" alt="" id="gambar">
+</body>
+
+<script type="text/javascript">
+
+    function gantigambar() {
+        let gambar = document.getElementById("listgambar").value;
+        document.getElementById("gambar").src = gambar;
+        alert("Ini Gambar " + gambar);
+    }
+</script>
+
+</html>
